@@ -1,8 +1,8 @@
-news-highlight
+## news-highlight
 
 heroku deploying project
 
-News Source
+## News Source
 
 **A simple app that lets you choose your preferred news source. **
 
@@ -15,26 +15,26 @@ Choose your preferred news source.
 Finally click on the link to read the articles form source.
 What we used
 
-The technoligies
+##  The technoligies
 
-HTML
-CSS
-Python
-Flask
-Bootstrap 4
-News Api
-Click here to see the site.
+**HTML
+**CSS
+**Python
+**Flask
+**Bootstrap 4
+**News Api
+**Click here to see the site.
 
-Authors
+## Author
 
 atienoanji
 
-Acknowledgments
+## Acknowledgments
 
 my mentor is charles
 License
 
-MIT License
+## MIT License
 
 Copyright (c) [2017] [atienoanji]
 
