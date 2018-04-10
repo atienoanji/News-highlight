@@ -1,40 +1,49 @@
-news-highlight
+## news-highlight
 
 heroku deploying project
 
-News Source
+## News Source
 
 **A simple app that lets you choose your preferred news source. **
 
 The site welcomes you with a simple styled u.i, with a jumbotron. The buttons display the category of news sources to view from.
 
 This will take you to that source's top headlines.
-Browse through the articles and get an description of each article.
-Tap a category to collapse a list of sources. You can tap it again to close the categories sources.
-Choose your preferred news source.
-Finally click on the link to read the articles form source.
-What we used
 
-The technoligies
+Browse through the articles and get an description of each article.
+
+Tap a category to collapse a list of sources. You can tap it again to close the categories sources.
+
+Choose your preferred news source.
+
+Finally click on the link to read the articles form source.
+
+### What we used
+
+##  The technoligies
 
 HTML
-CSS
-Python
-Flask
-Bootstrap 4
-News Api
-Click here to see the site.
 
-Authors
+CSS
+
+Python
+
+Flask
+
+Bootstrap 4
+
+News Api
+
+## Author
 
 atienoanji
 
-Acknowledgments
+## Acknowledgments
 
 my mentor is charles
 License
 
-MIT License
+## MIT License
 
 Copyright (c) [2017] [atienoanji]
 
