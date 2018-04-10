@@ -1,12 +1,15 @@
-<!--Should display at most basic display all highlights from a source -->
-{% extends 'base.html' %} {% import 'macros.html' as macro %}
+{% extends 'base.html' %}
+{% import 'macros.html' as macro%}
+<!-- styles block-->
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+<!-- end of styles -->
+
 {% block content %}
-<div class="container-fluid">
-  <div class="row mb-2">
-    <h3> The Top {{name}} Headlines</h3>
-  </div>
-  <div class="row">
-      {{macro.displayArticleList(news)}}
-  </div>
+<div class="container">
+        <h3>CHECKOUT TOP HEADLINES</h3>
+        <p>{{ macro.displayArticleList(articles) }}</p>
 </div>
 {% endblock %}

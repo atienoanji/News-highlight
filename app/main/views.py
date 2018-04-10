@@ -1,55 +1,34 @@
-from flask import render_template
+
+from flask import render_template,request,redirect,url_for
 from . import main
-from ..request import get_sources, get_articles
-# TODO: May have to import the Articles class here
-#  Views
+from ..request import get_sources,get_articles
 
-
+#views
 @main.route('/')
 def index():
-    """
-    Function that returns the index page and its data
+    '''
+    View root page function that returns the index page and
+    its data
+    '''
 
-    Example call
-    top_headlines = get_sources('de','business')
+    #get general sources
+    general_sources = get_sources('general')
+    sports_sources = get_sources('sports')
+    technology_sources = get_sources('technology')
+    entertainment_sources = get_sources('entertainment')
+    business_sources = get_sources('business')
+    health_sources = get_sources('health')
+    science_sources = get_sources('science')
 
-    We can also have a get_all() function that gets all the news
-    Example call from views would be
-    everything
-    """
-    general_list = get_sources('us', 'general')
-    business_list = get_sources('us', 'business')
-    technology_list = get_sources('us', 'technology')
-    sports_list = get_sources('us', 'sports')
-    health_list = get_sources('us', 'health')
-    science_list = get_sources('us', 'science')
-    entertainment_list = get_sources('us', 'entertainment')
-    test_args = 'Working!'
-    return render_template('index.html',
-                           test_param=test_args,
-                           general=general_list,
-                           business=business_list,
-                           technology=technology_list,
-                           sports=sports_list,
-                           health=health_list,
-                           science=science_list,
-                           entertainment=entertainment_list)
-
+    title = 'Home - Welcome to the best Online News Website'
+    return render_template('index.html',business = business_sources,health=health_sources,science=science_sources,title=title,sports = sports_sources, technology = technology_sources,entertainment = entertainment_sources ,general=general_sources)
 
 @main.route('/news/<id>')
 def news(id):
-    """
-    View articles page that returns the news article from a highlight
-    """
-    news_args = get_articles(id)
-    highlight_args = 'Route Working!!'
-    # name = f'{results_list}'
-    return render_template('news.html',
-                           highlight_param=highlight_args,
-                           news=news_args)
+    '''
+    view page function that returns the news articles and its data
+    '''
+    articles = get_articles(id)
+    title = 'Home - Welcome to the best Online News Website'
 
-
-"""
-We do not need another route to a sources articles since
-we will be displaying the urls tied to each article in our news list
-"""
+    return render_template('news.html', articles=articles, title=title)
